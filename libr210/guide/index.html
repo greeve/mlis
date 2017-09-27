@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Web Mapping Library Guide</title>
+	<meta name="author" content="Greg Reeve">
+	<meta name="description" content="Web mapping library guide. What is web mapping?">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+	<link rel='stylesheet' href='css/style.css'>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>Web Mapping Library Guide</h1>
+</header>
+
+<main>
+
+<p>This <a href="about.html" title="About this library guide">library guide</a> is designed to assist university-level geography students and faculty to better understand web mapping and provide resources to aid them in creating their own online maps. Resources in this guide are available by clicking on the links under <strong>Contents</strong>. </p>
+
+<div id='map' style="position: relative; width: 100%; height: 400px;"></div>
+<figcaption class="caption">A simple interactive web map (created using <a href="https://www.mapbox.com/mapbox.js/api/" target="_blank" title="Mapbox.js">Mapbox.js</a>).</figcaption>
+
+<h1>What is web mapping?</h1>
+
+<p>Any digital map that is accessible on the World Wide Web can be considered a web map. There are many <a href="uses.html" title="Web mapping uses">different types of web maps</a> being authored and consumed on the web today. Web maps can help you find specific directions from one place to another, perform spatial analysis, or establish spatial context and reference. Numerous tools exist for anyone who has the desire to <a href="making.html" title="Making web maps">create their own web maps</a>. Web mapping is the synthesis of two major technological achievements: the World Wide Web (web) and cartography (mapping).</p>
+
+<figure class="centered">
+<img src="images/map_layers1.png" width="420" height="473" alt="Web maps are comprised of many layers in various formats depicting various data themes">
+<figcaption class="caption">Web maps are constructed of many layers in various formats and data themes (Untitled).</figcaption>
+</figure>
+
+<h2>World Wide Web</h2>
+
+<p>Computer technology advancements in the mid 20th century established the conditions possible for sending messages between interconnected computers located in remote locations. In 1969 the first messages were sent between computers at the University of California Los Angeles (UCLA) and the Stanford Research Institute (SRI) (Gromov, 1995). Over time this network of computers grew to include many more computers throughout the United States. By the early 1990s internet connectivity had spread to Europe, Australia, and Asia (Chon, Konishi, Kanchanasut, &amp; Wong, 2003; Segal, 1995). </p>
+
+<p>With the growth and development of the internet in the late 1980s Tim Berners-Lee, an independent contractor at the European Organization for Nuclear Research (CERN) in Switzerland, along with another research collaborator, Robert Cailliau, looked to this new internet technology as a way for scientists to share data with other scientists throughout the world. Berners-Lee and Cailliau (1990) authored a proposal for a hypertext documents database with text links interconnecting the documents together (Gromov, 1995). This was the beginning of what is now known as the World World Web. The World Wide Web is the system of interlinked hypertext documents that are accessed over the internet. The World Wide Web is built using client-server technology where a client software program running on a local computer accesses a hypertext document from a remote server. Web browsers act as the client application that are programmed to display hypertext documents hosted on remove servers. Websites could then be created on the internet that would store interlinked hypertext documents that anyone could view with an internet connection and access to the World Wide Web. Along with the growth of the internet the World Wide Web has seen tremendous growth since its early beginnings in the late 1980s to early 1990s. It is projected that by the end of 2014 there will be 1 billion websites on the World Wide Web (Total number of websites, 2014). </p>
+
+<p>While the original set of websites on the World Wide Web were static in nature, improvements in computer and internet technologies made it possible for a more dynamic, interactive web. This focus on websites doing more than retrieving information for the user to passively consume has been termed Web 2.0 (O'Reilly, 2005). Web 2.0 establishes the World Wide Web as a participation platform where users contribute to as well as consume content. The Web 2.0 environment provided the opportunity to create unique mapping interfaces that aren't possible in a static, printed map. It also enabled a new class of map maker that may not be formally trained in the traditional methods of GIS and cartography. </p>
+
+<figure class="centered">
+<img src="images/webmap_arch.png" width="460" height="285" alt="Client-Server Architecture of a Web Map">
+<figcaption class="caption">The client-server architecture used in a web map (Client-Server Architecture).</figcaption>
+</figure>
+
+<h2>Cartography</h2>
+
+<p>Everything that happens on earth happens somewhere. Throughout history technology has enabled societies to capture and record geospatial information (also referred to as spatial or geographic information) for the purpose of better describing the world and their place in the world. Cartography is the science or practice of drawing maps. Babylonians from 2300 B.C. used clay tablets to map their known world. Greeks made discoveries about the spherical nature of earth including roughly calculating the circumference of the earth. Romans were one of the first known civilizations to create a map depicting a road network. During the period termed the Renaissance explorers constructed maps to help survey new lands and places throughout the world. The development of the printing press and mechanical moveable type ushered in a new era enabling mass production of maps. Advancements in surveying and plotting tools for map makers (or cartographers) increased the accuracy and quality of maps. </p>
+
+<p>From traditional cartography and mapping on clay tablets to remotely sensed data of the earth using aerial photography, methods have been developed to help create, maintain, retrieve, analyze, and share geospatial information. Advancements in computer technologies starting in the mid 20th century enabled the development of geographic informations systems (GIS). GIS can be broadly defined as any integrated collection of computer software and data used to capture, store, modify, analyze, and retrieve geospatial information. GIS is commonly comprised of six main components: hardware, software, data, procedures, the human user, and networks. Hardware refers to the computing devices that are used to run the various sets of GIS tasks and actions. This includes desktop computers, laptops, web servers, mobile phones, and tablets. The software is the set of computer instructions running on one or more devices that provides a digital interface for running GIS tasks and actions on computing devices. Examples include the web browser, desktop and server applications, or mobile apps. Data within a GIS refers to the digital representation of geographic features and attributes that GIS software encodes and decodes. The data is non-spatial tabular data tied to spatial data georeferenced to locations on earth. Spatial data can be represented in the from of vector features (points, lines, and polygons) or raster formats (rectangular grid storing data values for each position in the grid). Vector and raster data can be stored on disk in file-based formats or as items in a database. Procedures in GIS are the guidelines and rules put in place by an organization developing or implementing GIS. The people or users of GIS use the hardware, software, data, procedures, and networks to create, modify, update, and store GIS data and analyses. Communication and information sharing over computing and internet (and intranet) networks provides a backbone to the utility of GIS (Longley, Goodchild, Maguire, &amp; Rhind, 2005, p. 18-24). Thematic datasets in a GIS, (also referred to as layers), are overlaid together to create a map mashup. Overlaying layers that share the same geography can reveal new and interesting patterns and relationships that may not have been visible as individual layers. Web mapping enables the sophistication of computer cartography to be hosted and displayed on the World Wide Web.</p>
+
+<h3>References</h3>
+
+<div class="references">
+
+<p>Berners-Lee, T, &amp; Cailliau, R. (1990). <em>WorldWideWeb: Proposal for a hypertext project</em>. Retrieved from <a href="http://www.w3.org/Proposal.html">http://www.w3.org/Proposal.html</a></p>
+
+<p>Chon, K., Konishi, K., Kanchanasut, K., &amp; Wong, L. (2003, August). Internet history in Asia. In Shegeki Goto (Chair), <em>Advanced network conference in Busan</em>. Session conducted at the meeting of APAN, South Korea. Session proceedings retrieved from <a href="http://www.apan.net/meetings/busan03/cs-history.htm">http://www.apan.net/meetings/busan03/cs-history.htm</a></p>
+
+<p>Client-Server Architecture [Online image]. Retrieved from <a href="http://www.smartmapbrowsing.org/html/index\_en\_9.html">http://www.smartmapbrowsing.org/html/index\_en\_9.html</a></p>
+
+<p>Gromov, G. (1995). <em>Roads and Crossroads of the Internet History</em>. Retrieved from <a href="http://www.netvalley.com/intvalnext.html">http://www.netvalley.com/intvalnext.html</a></p>
+
+<p>Total number of websites. (2014). <em>Internet Live Stats</em>. Retrieved <a href="http://www.internetlivestats.com/total-number-of-websites/">http://www.internetlivestats.com/total-number-of-websites/</a></p>
+
+<p>Longley, P. A., Goodchild, M. F., Maguire, D. J., &amp; Rhind, D. W. (2005). <em>Geographic information systems and science</em>. West Sussex, England: John Wiley &amp; Sons Ltd.</p>
+
+<p>O'Reilly, T. (2005). <em>What is web 2.0: Design patterns and business models for the next generation of software</em>. Retrieved from <a href="http://oreilly.com/web2/archive/what-is-web-20.html">http://oreilly.com/web2/archive/what-is-web-20.html</a></p>
+
+<p>Segal, B. (1995). <em>A short history of internet protocols at CERN</em>. Retrieved from <a href="http://ben.web.cern.ch/ben/TCPHIST.html">http://ben.web.cern.ch/ben/TCPHIST.html</a></p>
+
+<p>[Untitled illustration of map layers]. Retrieved from <a href="http://gis.binghamton.edu/Bibliography.htm">http://gis.binghamton.edu/Bibliography.htm</a></p>
+
+</div> <!-- div references -->
+
+</main>
+
+<aside>
+<h3>Contents</h3>
+<ul>
+<li><a href="/library/guides/mapping/" title="What is web mapping?">What is web mapping?</a></li>
+<li><a href="uses.html" title="Web map uses">How are web maps used?</a>
+<ul>
+<li><a href="uses.html#route" title="Route Finding Web Maps">Route Finding</a></li>
+<li><a href="uses.html#reference" title="Reference Web Maps">Reference</a></li>
+<li><a href="uses.html#thematic" title="Thematic Web Maps">Thematic</a></li>
+<li><a href="uses.html#analysis" title="Analytical Web Maps">Analysis</a></li>
+<li><a href="uses.html#animated" title="Animated Web Maps">Animated</a></li>
+<li><a href="uses.html#static" title="Static Web Maps">Static</a></li>
+</ul></li>
+<li><a href="making.html" title="Creating web maps">How do I make a web map?</a>
+<ul>
+<li><a href="making.html#tools" title="Map making tools">Map Making Tools</a></li>
+<li><a href="making.html#data" title="Finding data">Finding Data</a></li>
+<li><a href="making.html#tutorials" title="Tutorials for making web maps">Tutorials</a></li>
+</ul></li>
+<li><a href="resources.html" title="Additional resources">Additional Resources</a>
+<ul>
+<li><a href="resources.html#lc" title="Library of Congress subject headings">Subject Headings</a></li>
+</ul></li>
+<li><a href="about.html" title="About this library guide">About</a>
+<ul>
+<li><a href="about.html#purpose" title="Purpose of this library guide">Purpose</a></li>
+<li><a href="about.html#audience" title="Intended audience for this library guide">Audience</a></li>
+<li><a href="about.html#author" title="About the library guide author">Author</a></li>
+</ul></li>
+</ul>
+</aside>
+
+<footer>
+<img src="images/world_map_sm.png" width="96" height="65" alt="Its a small world!">
+</footer>
+
+</div> <!-- div container -->
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiZ3JlZXZlIiwiYSI6ImNpdmluZTJjcjAyNDkyenAzYzdvOXZicWgifQ.lBa_c91LYykmgGkdHQOqeg';
+var map = new L.mapbox.map('map', 'mapbox.streets', {
+	center: new L.LatLng(40, -100),
+	zoom: 3
+});
+</script>
+
+</body>
+</html>

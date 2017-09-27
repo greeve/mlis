@@ -1,0 +1,365 @@
+/*
+Theme Name: SJSU SLIS LIBR204 Website
+Description: SJSU SLIS LIBR204 Website styles
+Author: Greg Reeve
+*/
+
+/* Main Styles */
+
+html {
+    font-family: "Palatino, Georgia"; 
+	font-size: 1.3125em;
+}
+
+body{
+    font: 1em;
+    margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+h1 { 
+    font-size: 3em;
+	font-weight:normal;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 0 0 2% 0;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 4% 0 0 0;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.center { 
+    margin: 0 auto; 
+}
+
+.content { 
+    margin: 0 auto; 
+    padding: 0 5% 5% 5%;
+    width: 960px; 
+    background: rgba(0,0,0,0.7);
+    line-height: 1.6;
+}
+
+.content p {
+    margin: 4%;
+    font-size: 1.4em;
+    line-height: 1.3;
+}
+
+.clear { 
+    clear: both; 
+}
+
+a.lpanel { 
+    float: left; 
+    color: #e1e1e1; 
+    font-size: 12px; 
+    text-decoration: none; 
+    margin: 7px 11px; 
+}
+
+a.rpanel { 
+    float: right; 
+    color: #e1e1e1; 
+    font-size: 12px; 
+    text-decoration: none; 
+    margin: 7px 11px; 
+}
+
+a.lpanel:hover { 
+    color: #fff; 
+}
+
+a.rpanel:hover { 
+    color: #fff; 
+}
+
+/* Header and Navigation Styles*/
+
+#header { 
+    width: 100%; 
+	background: url('../images/header-bg.png'); 
+	height: 80px; 	
+	position: fixed;
+	margin-top: 30px;
+}
+
+.logo {
+    margin: 0 5%; 
+}
+
+.logo a { 
+    color: #fff; 
+    text-decoration: none; 
+    float: left; 
+    font-size: 1.4em; 
+    margin-top: 20px; 
+    color: #fff; 
+    font-weight: bold; 
+}
+
+.logo a:hover { 
+    color: #ccc; 
+    opacity: 1;  
+}
+
+
+/* Quotation Styles */
+
+.quotes {   
+    font-weight: normal;
+    font-size: 1em;
+    text-align: left;
+    margin: 6% auto;
+    line-height: 1.3;
+}
+   
+.author_name_white {  
+    margin: 70px 0 0 75px; 
+    color: #fff; 
+    font-size: 0.8em; 
+}  
+
+.quotes_container { 
+    width: 800px; 
+    margin: 0 auto; 
+}
+
+/* Button Styles */
+
+button.btn-know { 
+	padding: 15px 47px; 
+	margin: 40px 38.8%;
+	text-align: center;
+	border: 4px solid #fff; 
+	color: #fff; 
+	background: transparent; 
+	font-size: 19px;
+	cursor: pointer;
+	text-shadow: -1px 2px 0px rgba(90, 90, 90, 0.56);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.btn-know:hover { 
+    background: #fff; 
+    color: transparent; 
+}
+
+ul.built { 
+    list-style: none; 
+    margin: 0 auto; 
+    width: 730px; 
+}
+
+.built li img{ 
+    float: left; 
+    padding-right: 34px; 
+}
+
+/* Slides Styles */
+
+#title, #intro { 
+    width: 100%; 
+}
+
+#title {
+	background:url('../images/anchor.png') 50% 0 no-repeat fixed;
+	color: #fff;
+	height: 400px;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+}
+
+#intro {
+	color: #fff;
+	background-color: #fff;
+	height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 200px 0;
+}
+
+#intro .content {
+    background-color: #fff;
+    color: #333;
+}
+
+#intro .content h2 {
+    background-color: #fff;
+    color: #333;
+}
+
+#definition {
+	background: url('../images/big_dipper.png') 50% 0 no-repeat fixed;
+	color: #fff;
+	height: 800px;
+	padding: 170px 0 0 0;	
+	background-size: cover;
+}
+
+#people {
+	color: #fff;
+	background-color: #fff;
+	height: 400px;
+	padding: 200px 0;
+}
+
+#people .content {
+    background-color: #fff;
+    color: #333;
+}
+
+#people .content h2 {
+    background-color: #fff;
+    color: #333;
+}
+
+#service {
+	background: url('../images/boss_leader.jpg') 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0 auto;
+	padding: 250px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+#obedient {
+	color: #fff;
+	background-color: #fff;
+	height: 600px;
+	padding: 200px 0;
+}
+
+#obedient .content {
+    background-color: #fff;
+    color: #333;
+}
+
+#obedient .content h2 {
+    background-color: #fff;
+    color: #333;
+}
+
+#obedient .content h4 {
+    background-color: #fff;
+    color: #333;
+}
+
+#anywhere {
+	background: url('../images/geometric.png') 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0 auto;
+	padding: 250px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+#seeing {
+	background: url('../images/faces.jpg') 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0 auto;
+	padding: 250px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+#adaptation {
+	color: #fff;
+	background-color: #fff;
+	height: 600px;
+	padding: 200px 0;
+}
+
+#adaptation .content {
+    background-color: #fff;
+    color: #333;
+}
+
+#adaptation .content h2 {
+    background-color: #fff;
+    color: #333;
+}
+
+#adaptation .content h4 {
+    background-color: #fff;
+    color: #333;
+}
+
+#communication {
+	background: url('../images/notebook.png') 50% 0 no-repeat fixed;
+	height: 500px;
+	margin: 0 auto;
+	padding: 200px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+#conclusion {
+	color: #fff;
+	background-color: #fff;
+	height: 600px;
+	padding: 200px 0;
+}
+
+#conclusion .content {
+    background-color: #fff;
+    color: #333;
+}
+
+#conclusion .content h2 {
+    background-color: #fff;
+    color: #333;
+}
+
+#references {
+	background: url('../images/lines.jpg') 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0 auto;
+	padding: 250px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+#references .content p {
+    font-size: 1em;
+}
+
+/* Footer Styles */
+
+#copyright  { 
+    color: #fff;  
+    font-size: 14px; 
+    margin-top: 100px; 
+    text-align: center;  
+}
+
+#copyright  a { 
+    text-decoration: none; 
+    color: #fff;  
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Web Mapping Library Guide - How do I make a web map?</title>
+	<meta name="author" content="Greg Reeve">
+	<meta name="description" content="Web mapping library guide. How do I make a web map?">
+	<link rel='stylesheet' href='css/style.css'>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>Web Mapping Library Guide</h1>
+</header>
+
+<main>
+
+<h1>How do I make a web map?</h1>
+
+<p>A good web map starts with a well designed idea that can be mapped. Before choosing the technology to create a web map, or even before gathering data for the map, it is important to determine the web map's purpose. It helps to ask, </p>
+
+<blockquote>
+  <p>"<em>What story do I want this web map to tell?</em>"<br> 
+  "<em>Who is the intended audience for my web map?</em>"</p>
+</blockquote>
+
+<p>Once the purpose and audience for the web map are determined the next step is to choose which technology to use to create the map.</p>
+
+<h2 id="tools">Map Making Tools</h2>
+
+<p>There are variety of mapping tools available on the web that cater to various skill levels. Some tools are free and others require payment; some tools are easy to pickup and use while others are more complex and require a steep learning curve. This is a list of various tools you can use to create a web map. </p>
+
+<h3>Tools for Novice Users</h3>
+
+<p>Here is a list of map making tools that are designed for use by novice web users. These tools require little to no web programming knowledge to create web maps.</p>
+
+<ul>
+<li><a href="https://www.mapbox.com" title="Mapbox" target="_blank">Mapbox</a></li>
+<li><a href="http://cartodb.com" title="CartoDB" target="_blank">CartoDB</a> </li>
+<li><a href="http://www.zeemaps.com" title="ZeeMaps" target="_blank">ZeeMaps</a></li>
+<li><a href="http://www.arcgis.com/home" title="Esri ArcGIS Online" target="_blank">ArcGIS Online</a></li>
+<li><a href="http://www.click2map.com/free_map_creator" title="Click2Map Creator" target="_blank">Click2Map Free Map Creator</a></li>
+<li><a href="http://www.targetmap.com" title="Target Map" target="_blank">Target Map</a></li>
+<li><a href="http://maps.nationalgeographic.com/map-machine" title="National Geographic Map Machine" target="_blank">National Geographic Map Machine</a></li>
+</ul>
+
+<h3>Tools for Experienced Users</h3>
+
+<p>This list of tools are for the more experienced web user. These tools have a high learning curve and require basic knowledge about programming on the web. Despite the higher learning cure these tools can provide greater control and flexibility when creating web maps.</p>
+
+<ul>
+<li><a href="https://developers.google.com/maps/documentation/javascript/" title="Google Maps API" target="_blank">Google Maps API</a></li>
+<li><a href="http://www.google.com/earth/" title="Google Earth" target="_blank">Google Earth</a></li>
+<li><a href="http://www.esri.com/software/arcgis/explorer" title="Esri's ArcGIS Explorer" target="_blank">ArcGIS Explorer</a></li>
+<li><a href="http://leafletjs.com" title="Leaflet.js" target="_blank">Leaflet</a></li>
+<li><a href="http://polymaps.org" title="Polymaps" target="_blank">Polymaps</a></li>
+<li><a href="http://www.qgis.org/en/site/" title="QGIS" target="_blank">QGIS</a></li>
+<li><a href="https://www.mapbox.com/tilemill/" title="TileMill design studio" target="_blank">TileMill</a>: MapBox's web map design toolkit that runs on your local computer. Use this to create web maps you can upload to an account on <a href="https://www.mapbox.com/" title="MapBox" target="_blank">MapBox.com</a>.</li>
+<li><a href="http://www.esri.com/software/arcgis/arcgis-for-desktop" title="Esri ArcGIS for Desktop" target="_blank">ArcGIS for Desktop</a></li>
+</ul>
+
+<h2 id="data">Finding Data</h2>
+
+<p>Finding data is essential to constructing a good web map. What data to gather for the web map is based on the purpose of the map. Geospatial data used in a map can be classified as either raster or vector. Raster data is characterized as a two-dimensional grid of cells. Each cell may contain a discrete, continuous, or null value. These values represent attributes of measurable things on earth like land use or temperature. Color values can be assigned to each value in the grid to help visualize the raster data in a map. Vector data uses primitive geometrical components to represent geographical features on the earth. These geometries are points, lines, and polygons. Points are used to represent a feature that can be best depicted as a single point of reference on a map. At small scales on a map of a country in the world cities could be represented using points. Lines can represent linear features like roads, railways, rivers, and trails. Lines can also be used to depict contour lines which are often used to show elevation using topographic lines. Polygons are used to depict features that cover an area on the surface of the earth. Waterbodies, geopolitical boundaries, land parcels, parks, and land use areas can all be represented using a polygon geometry. Choosing the format of geospatial data to use depends upon the purpose and audience of the web map. The following links are not intended to be a comprehensive list of data sources but may provide a useful starting point when creating a web map.</p>
+
+<ul>
+<li><a href="http://www.naturalearthdata.com" title="Natural Earth data" target="_blank">Natural Earth</a></li>
+<li><a href="http://www.nationalatlas.gov/atlasftp.html" title="National Atlas Data" target="_blank">National Atlas Data</a></li>
+<li><a href="http://factfinder2.census.gov/faces/nav/jsf/pages/download_center.xhtml" title="U.S. Census Data" target="_blank">U.S. Census Data</a></li>
+<li><a href="http://www.broadbandmap.gov/data-download" title="U.S. Broadband Map Data" target="_blank">U.S. National Broadband Map Data</a></li>
+<li><a href="http://catalog.data.gov/dataset" title="data.gov" target="_blank">Data.gov</a></li>
+<li><a href="http://gis.utah.gov/data/" title="Utah ARGC" target="_blank">Utah State's Geographic Information Database (SGID)</a></li>
+</ul>
+
+<h2 id="tutorials">Tutorials</h2>
+
+<p>Below are some tutorials to help walkthrough the steps of creating a web map.</p>
+
+<ul>
+<li><a href="https://developers.google.com/maps/documentation/javascript/tutorial" target="_blank">Google Maps API Tutorial</a></li>
+<li><a href="http://multimedia.journalism.berkeley.edu/tutorials/qgis-basics-journalists/" target="_blank">QGIS Tutorial</a></li>
+<li><a href="http://dataforradicals.com/the-insanely-illustrated-guide-to-your-first-tile-mill-map/" target="_blank">Illustrated TileMill Tutorial</a></li>
+<li><a href="http://resources.arcgis.com/en/tutorials/" title="Esri ArcGIS Online tutorials" target="_blank">ArcGIS.com Tutorials</a></li>
+<li><a href="http://dataist.wordpress.com/tag/polymaps/" title="Polymaps Tutorial" target="_blank">Polymaps Tutorial</a></li>
+<li><a href="http://www.mapbox.com/developers/guide/" target="_blank">Mapbox Web Map Guide</a></li>
+</ul>
+
+</main>
+
+<aside>
+<h3>Contents</h3>
+<ul>
+<li><a href="/library/guides/mapping/" title="What is web mapping?">What is web mapping?</a></li>
+<li><a href="uses.html" title="Web map uses">How are web maps used?</a>
+<ul>
+<li><a href="uses.html#route" title="Route Finding Web Maps">Route Finding</a></li>
+<li><a href="uses.html#reference" title="Reference Web Maps">Reference</a></li>
+<li><a href="uses.html#thematic" title="Thematic Web Maps">Thematic</a></li>
+<li><a href="uses.html#analysis" title="Analytical Web Maps">Analysis</a></li>
+<li><a href="uses.html#animated" title="Animated Web Maps">Animated</a></li>
+<li><a href="uses.html#static" title="Static Web Maps">Static</a></li>
+</ul></li>
+<li><a href="making.html" title="Creating web maps">How do I make a web map?</a>
+<ul>
+<li><a href="making.html#tools" title="Map making tools">Map Making Tools</a></li>
+<li><a href="making.html#data" title="Finding data">Finding Data</a></li>
+<li><a href="making.html#tutorials" title="Tutorials for making web maps">Tutorials</a></li>
+</ul></li>
+<li><a href="resources.html" title="Additional resources">Additional Resources</a>
+<ul>
+<li><a href="resources.html#lc" title="Library of Congress subject headings">Subject Headings</a></li>
+</ul></li>
+<li><a href="about.html" title="About this library guide">About</a>
+<ul>
+<li><a href="about.html#purpose" title="Purpose of this library guide">Purpose</a></li>
+<li><a href="about.html#audience" title="Intended audience for this library guide">Audience</a></li>
+<li><a href="about.html#author" title="About the library guide author">Author</a></li>
+</ul></li>
+</ul>
+</aside>
+
+<footer>
+<img src="images/world_map_sm.png" width="96" height="65" alt="Its a small world!">
+</footer>
+
+</div> <!-- div container -->
+
+</body>
+</html>

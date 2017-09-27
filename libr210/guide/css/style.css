@@ -1,0 +1,118 @@
+/* CSS */
+
+html {
+  font-family: Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  font-size: 1.3125em;
+  text-align: left;
+  color: #333;
+}
+
+header, main, aside, footer {
+	display: block;
+}
+
+body {
+	margin: 0;
+	font: 1em;
+	background: #fff;
+}
+
+h1 { 
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+a {
+	text-decoration: inherit;
+	font-style: inherit;
+	color: inherit;
+}
+
+a:link, a:visited {
+	border: none;
+	text-decoration: underline;
+	font-style: normal;
+	color: black;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #000;
+	background-color: #ccc;
+}
+
+a:focus {
+	outline: thin dotted;
+	text-decoration: none;
+	color: #000;
+	background-color: #ccc;
+}
+
+li {
+	line-height: 1.6;
+}
+
+figure {
+	text-align: center;
+}
+
+.centered {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.caption {
+	font-size: 0.7em;
+	display: table;
+	margin: 0.3em auto 0em auto;
+}
+
+.container {
+	margin: 0 auto;
+	width: 960px;
+	background: #fff;
+}
+
+header {
+	padding: 1em;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	color: #000;
+	background: #A7B682;
+}
+
+main {
+	float: right;
+	width: 60%;
+	padding: 5%;
+	font-size: 1em;
+	line-height: 1.6;
+	background: #fff;
+}
+
+aside {
+	float: right;
+	width: 26%;
+	padding: 2%;
+	font-size: 0.7em;
+	background: #fff;
+}
+
+footer {
+	clear: both;
+	padding: 1em 2em;
+	font-size: 0.6em;
+	background: #fff;
+}
+
+.references {
+	font-size: 0.9em;
+}
